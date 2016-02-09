@@ -2,12 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.tag {
+  margin-bottom: 36px;
+  color: #777;
+}
+h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: rgb(32, 33, 31)
+}
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #666;
+}
 .navigation {
 
   a {
     margin-left: 36px;
-    font-weight: bold;
+    font-weight: normal;
     text-transform: uppercase;
     color: #888;
+    font-family: 'Roboto', sans-serif;
+    &:hover {
+      text-decoration: none;
+      color: green;
+    }
   }
 }

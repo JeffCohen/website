@@ -10,15 +10,16 @@
 
     = render 'layouts/navbar'
 
+
     .container-fluid
 
       .row
         .col-sm-3.navigation
           %p= link_to "Home", root_path
-          %p= link_to "Essays", essays_path
-          %p= link_to "Speaking", essays_path
-          %p= link_to "Consulting", essays_path
-          %p= link_to "For Students", essays_path
+          -# %p= link_to "Essays", essays_path
+          %p= link_to "Consulting", consulting_path
+          %p= link_to "Speaking", speaking_path
+          -# %p= link_to "For Students", essays_path
 
-        .col-sm-9
+        .col-sm-8
           = yield
