@@ -3,6 +3,8 @@
   %head
     %title Website
     = stylesheet_link_tag    'application', media: 'all'
+    = stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'
+
     = javascript_include_tag 'application'
     = javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
     = csrf_meta_tags
@@ -14,7 +16,7 @@
     .container-fluid
 
       .row
-        .col-sm-3.navigation
+        .col-sm-3.navigation.hidden-xs
           %p= link_to "Home", root_path
           -# %p= link_to "Essays", essays_path
           %p= link_to "Consulting", consulting_path
