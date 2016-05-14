@@ -13,7 +13,7 @@ class CommandsController < ApplicationController
       message = "The next launch will be in #{eta}!\nScheduled liftoff: #{scheduled}".sub(/  /,' ')
     end
 
-    respond_to plain: message
+    render plain: message
   end
 
 end
