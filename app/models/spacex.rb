@@ -21,9 +21,11 @@ class Spacex
         note.value = spacex_launch['net']
         note.save
       end
+      note
     rescue => e
       Rails.logger.warn "COULD NOT REFRESH SPACEX"
       Rails.logger.warn e.message
+      nil
     end
   end
 end
