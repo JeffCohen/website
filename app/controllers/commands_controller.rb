@@ -10,7 +10,7 @@ class CommandsController < ApplicationController
     else
       eta = distance_of_time_in_words(t - Time.now)
       scheduled = t.in_time_zone('America/Chicago').strftime("%A, %B %e, %Y at %l:%M %P")
-      message = "The next launch will be in #{eta}!\nScheduled liftoff: #{scheduled}".sub(/  /,' ')
+      message = "The next launch will be in #{eta}!\n#{scheduled}".sub(/  /,' ')
     end
 
     render plain: message
