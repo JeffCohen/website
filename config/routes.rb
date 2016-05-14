@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get 'speaking' => 'pages#speaking'
   get 'consulting' => 'pages#consulting'
 
+  get 'spacex' => 'commands#spacex'
+
 end
