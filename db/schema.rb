@@ -13,8 +13,10 @@
 
 ActiveRecord::Schema.define(version: 20160208205854) do
 
-  create_table "events", force: :cascade do |t|
-    t.text "msg"
+  create_table "notes", force: :cascade do |t|
+    t.text     "name"
+    t.text     "value"
+    t.datetime "updated_at"
   end
 
 end

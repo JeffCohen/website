@@ -3,9 +3,9 @@ class CommandsController < ApplicationController
   include ActionView::Helpers::DateHelper
 
   def spacex
-    t = Time.parse("2016-05-26 21:40 GMT")
+    t = Spacex.next_launch
 
-    if Time.now > t
+    if !t || (Time.now > t)
       message = "I don't know the time of the next launch."
     else
       eta = distance_of_time_in_words(t - Time.now)
