@@ -28,4 +28,29 @@ class Spacex
       nil
     end
   end
+
+  def self.refresh_and_announce_to_slack_if_launch_changed
+    note = Note.find_by(name: 'spacex.next')
+    old_launch_time = note.try(:value)
+    refresh
+    note.reload
+    if old_launch_time != note.value
+      Rails.logger.info "New launch time: #{note.value}"
+      url = 'https://hooks.slack.com/services/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'
+
+      json_headers = {"Content-Type" => "application/json",
+                      "Accept" => "application/json"}
+
+      uri = URI.parse(url)
+      http = Net::HTTP.new(uri.host, uri.port)
+
+      scheduled = Time.parse(note.value).in_time_zone('America/Chicago').strftime("%A, %B %e, %Y at %l:%M %P")
+      message = "New launch time!\nNow scheduled for: #{scheduled}".sub(/  /,' ')
+
+      response = http.post(uri.path, message, json_headers)
+      Rails.logger.info "Sent to slack: #{response.code}"
+    end
+
+  end
+
 end
