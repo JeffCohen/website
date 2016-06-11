@@ -4,7 +4,7 @@
 %p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 .row
-  .col-sm-8
+  .col-sm-6
     %h4 Agenda
 
     %ul
@@ -21,5 +21,11 @@
       %li One
       %li One
 
-  .col-sm-4
+  .col-sm-6
     %h4 Sign Up
+
+    %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "_top"}
+      %input{:name => "cmd", :type => "hidden", :value => "_s-xclick"}/
+      %input{:name => "hosted_button_id", :type => "hidden", :value => "CEVPMETNVMQKY"}/
+      %input{:alt => "PayPal - The safer, easier way to pay online!", :border => "0", :name => "submit", :src => "https://www.paypalobjects.com/en_US/i/btn/btn_paynow_LG.gif", :type => "image"}/
+      %img{:alt => "", :border => "0", :height => "1", :src => "https://www.paypalobjects.com/en_US/i/scr/pixel.gif", :width => "1"}/
