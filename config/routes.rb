@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'payments/new'
+
   root 'pages#index'
 
   get 'essays' => 'essays#index'
@@ -8,5 +10,8 @@ Rails.application.routes.draw do
   get 'tutoring' => 'pages#tutoring'
 
   get 'spacex' => 'commands#spacex'
+  get 'google' => 'payments#new', id: 'google'
+
+  resources :payments 
 
 end
