@@ -1,0 +1,29 @@
+- if @attendee.paid?
+  %p.text-success
+    %strong Our records show that you have already paid.
+  %p If you think this is incorrect, please contact your organizer.
+  %p= link_to "(Or you can try another email address)", google_path
+  %p Thank you!
+
+- else
+
+  
+  %button#payment_stripe.btn.btn-primary Pay Now with Credit Card
+
+  -# = form_tag '', remote: true do
+  -#   %script.stripe-button{"data-key" => Rails.configuration.stripe[:publishable_key],
+  -#                         "data-label" => 'Pay with Credit Card',
+  -#                         "data-amount" => @amount_in_cents.to_s,
+  -#                         "data-description" => "2-Day Coding Workshop",
+  -#                         "data-key" => "pk_test_6pRNASCoBOKtIshFeQd4XMUh",
+  -#                         "data-locale" => "auto",
+  -#                         "data-name" => "Purple Workshops",
+  -#                         "data-allow-remember-me" => false,
+  -#                         "data-email" => @attendee.email,
+  -#                         "data-zip-code" => true,
+  -#                         :src => "https://checkout.stripe.com/checkout.js"}
+  -#
+  -# or
+  -#
+  -# = button_to paypal_payments_path(id: @attendee.id), id: 'paypal-btn', class: 'stripe-button-el' do
+  -#   %span{:style => "display: block; min-height: 30px;"} Pay with PayPal

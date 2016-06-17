@@ -11,7 +11,14 @@ Rails.application.routes.draw do
 
   get 'spacex' => 'commands#spacex'
   get 'google' => 'payments#new', id: 'google'
+  post 'google' => 'payments#create', id: 'google'
 
-  resources :payments 
+  resources :payments do
+    collection do
+      post 'precheck'
+      post 'paypal'
+    end
+  end
 
+  resources :attendees
 end

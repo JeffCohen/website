@@ -4,10 +4,8 @@
     %title Jeffrey Cohen
     = stylesheet_link_tag    'application', media: 'all'
     = stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'
-    = stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css'
-
     = javascript_include_tag 'application'
-    = javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    = javascript_include_tag 'https://js.stripe.com/v2/'
     = csrf_meta_tags
   %body
 
@@ -20,21 +18,8 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to "Jeffrey Cohen + Google", payments_path(id: params[:id]), class: 'navbar-brand'
+      = link_to "Jeffrey Cohen + Google", google_path, class: 'navbar-brand'
 
-    %ul.nav.navbar-nav.navbar-right
-      %li
-        = link_to "https://twitter.com/jeffcohen" do
-          %i.fa.fa-twitter
-          Twitter
-      %li
-        = link_to "https://github.com/jeffcohen" do
-          %i.fa.fa-github
-          GitHub
-      %li
-        = link_to "https://www.linkedin.com/in/codeteacher" do
-          %i.fa.fa-linkedin
-          LinkedIn
 
 .container.payments
 

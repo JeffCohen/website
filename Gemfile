@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'haml'
 gem 'ez'
+gem 'stripe'
+gem 'kaminari'
+gem 'bootstrap_form'
 
 gem 'rails', '4.2.5.1'
 gem 'sass-rails', '~> 5.0'
@@ -20,6 +23,7 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3'
+  gem 'quiet_assets'
 end
 
 group :development do

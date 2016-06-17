@@ -1,3 +1,28 @@
 // Place all the styles related to the payments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.payments {
+  #paypal-link {
+    padding-left: 24px;
+  }
+  h2 { font-size: 20px; font-weight: bold; }
+  p {
+    font-size: 16px;
+  }
+  p.lead {
+    font-weight: normal;
+    font-size: 18px;
+  }
+  ul {
+    font-size: 16px;
+  }
+  .media {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    h4 { font-size: 18px; }
+  }
+  .page-header { margin-top: 0px; }
+  h1 small { color: #2196f3; font-weight: bold; font-size: 85%; }
+  .row { margin-bottom: 24px; }
+}

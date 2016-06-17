@@ -1,0 +1,32 @@
+%h1
+  Attendees
+  %small= @attendees.count
+
+.row
+
+  .col-sm-6.table-responsive
+    %table.table.table-striped
+      %thead
+        %tr
+          %th Paid
+          %th Email
+          %th Date
+          %th Actions
+      %tbody
+        - @attendees.each do |attendee|
+          %tr
+            %td
+              - if attendee.paid?
+                %i.fa.fa-check.fa-lg.text-success
+            %td= attendee.email
+            %td= attendee.created_at.strftime("%m/%d/%Y")
+            %td
+              = link_to "Delete", attendee, method: :delete, class: 'btn btn-sm btn-warning', data: { confirm: "Are you sure?" } unless attendee.paid?
+              = link_to "Mark As Paid", attendee_path(attendee, paid: true), class: 'btn btn-sm btn-success', method: :patch, data: { confirm: "Are you sure?" } unless attendee.paid?
+              = link_to "Mark as Not Paid", attendee_path(attendee, paid: false), class: 'btn btn-sm btn-primary', method: :patch, data: { confirm: "Are you sure?" } if attendee.paid?
+
+
+  .col-sm-6
+    = bootstrap_form_for Attendee.new, layout: :inline do |form|
+      = form.email_field :email, size: 50, label: "Add Email:"
+      = form.submit "Add", class: 'btn btn-primary'

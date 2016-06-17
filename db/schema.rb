@@ -13,9 +13,23 @@
 
 ActiveRecord::Schema.define(version: 20160208205854) do
 
+  create_table "attendees", force: :cascade do |t|
+    t.string   "email"
+    t.boolean  "paid",       default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "notes", force: :cascade do |t|
     t.text     "name"
     t.text     "value"
+    t.datetime "updated_at"
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.string   "email"
+    t.string   "token"
+    t.datetime "created_at"
     t.datetime "updated_at"
   end
 
