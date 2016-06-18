@@ -12,7 +12,6 @@
 
     = render 'layouts/navbar'
 
-
     .container-fluid
 
       .row
@@ -26,3 +25,5 @@
 
         .col-sm-8
           = yield
+
+    = render 'layouts/ga' #if Rails.env.production?

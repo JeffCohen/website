@@ -24,3 +24,5 @@
 .container.payments
 
   = yield
+
+  = render 'layouts/ga' if Rails.env.production?
