@@ -3,6 +3,8 @@ Note
   value: text
   updated_at
 
+  index! :name,
+
 Attendee
   email
   paid: boolean(false)
@@ -14,3 +16,4 @@ Payment
   token
   created_at
   updated_at
+  
