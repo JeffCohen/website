@@ -2,8 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+nav.navbar-default {
+  background: #165199;
+  .navbar-brand {
+    color: white;
+  }
+}
 .navbar-default .navbar-nav > li > a {
-  color: #187126;
+  // color: #187126;
+  color: white;
   font-weight: bold;
 }
 h1 {
