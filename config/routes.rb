@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'speaking' => 'pages#speaking'
   get 'consulting' => 'pages#consulting'
   get 'tutoring' => 'pages#tutoring'
+  get 'training' => 'pages#training'
 
   get 'spacex' => 'commands#spacex'
   get 'google' => 'payments#new', id: 'google'
