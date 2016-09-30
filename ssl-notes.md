@@ -1,6 +1,14 @@
-`sudo certbot certonly --manual`
+# Expires Friday, Nov 18 2016
 
-IMPORTANT NOTES:
+# RENEWING:
+
+- sudo certbot renew --agree-tos --manual-public-ip-logging-ok
+- sudo heroku certs:update /etc/letsencrypt/live/jeffcohenonline.com/fullchain.pem /etc/letsencrypt/live/jeffcohenonline.com/privkey.pem
+
+
+# IMPORTANT NOTES:
+
+Initial install: `sudo certbot certonly --manual`
 
  - Congratulations! Your certificate and chain have been saved at
    /etc/letsencrypt/live/jeffcohenonline.com/fullchain.pem. Your cert
