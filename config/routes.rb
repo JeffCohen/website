@@ -14,6 +14,11 @@ Rails.application.routes.draw do
   get 'google' => 'payments#new', id: 'google'
   post 'google' => 'payments#create', id: 'google'
 
+  # Teaching
+
+  get '/prereq' => 'teaching#hackthis'
+
+  # ECommerce
   resources :payments do
     collection do
       post 'precheck'

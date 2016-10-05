@@ -1,0 +1,18 @@
+.row
+  .col-sm-9.col-offset-3
+
+    %h1 Hack My Site
+
+    %p Think you're ready for my course?
+
+    / Hello future student!
+    /
+    / Here's the secret username and password:
+    /
+    /  Username: stan
+    /  Password: mikita
+
+    = bootstrap_form_tag url: '#', method: :get, id: 'hack-form' do |f|
+      = f.text_field :username, autofocus: true
+      = f.password_field :password
+      = f.submit "Let Me In", id: 'hack-form', class: 'btn btn-primary'
