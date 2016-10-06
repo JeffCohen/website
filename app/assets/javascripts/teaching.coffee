@@ -8,6 +8,6 @@ $ ->
     u = $("#username").val()
     p = $("#password").val()
     if (u == 'stan') and (p == 'mikita')
-      console.debug "Nice work!  You are ready for KIEI-925."
+      console.debug "Congratulations! You are ready for KIEI-925.  See you in class!"
     else
-      console.error "You didn't say the magic word."
+      console.error "Nice try, but you didn't say the magic word."
