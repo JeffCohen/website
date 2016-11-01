@@ -2,8 +2,8 @@
 
 # RENEWING:
 
-- sudo certbot renew --agree-tos --manual-public-ip-logging-ok
-- sudo heroku certs:update /etc/letsencrypt/live/jeffcohenonline.com/fullchain.pem /etc/letsencrypt/live/jeffcohenonline.com/privkey.pem
+- sudo certbot certonly --manual -d jeffcohenonline.com,www.jeffcohenonline.com
+- sudo heroku certs:update /etc/letsencrypt/live/jeffcohenonline.com/fullchain.pem /etc/letsencrypt/live/jeffcohenonline.com/privkey.pem --confirm website-dev
 
 
 # IMPORTANT NOTES:
