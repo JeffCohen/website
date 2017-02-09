@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
+  get '/amazon.json' => 'amazon#index'
+  
   get 'essays' => 'essays#index'
   get 'speaking' => 'pages#speaking'
   get 'bio' => 'pages#about'
