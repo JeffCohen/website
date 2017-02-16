@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   get '/amazon.json' => 'amazon#index'
-  
+  get '/creditcard.json' => 'credit_card_validator#new'
+
   get 'essays' => 'essays#index'
   get 'speaking' => 'pages#speaking'
   get 'bio' => 'pages#about'
