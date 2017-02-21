@@ -4,8 +4,11 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
+  # For Students
   get '/amazon.json' => 'amazon#index'
   get '/creditcard.json' => 'credit_card_validator#new'
+
+  ###
 
   get 'essays' => 'essays#index'
   get 'speaking' => 'pages#speaking'
@@ -16,6 +19,8 @@ Rails.application.routes.draw do
   get 'training' => 'pages#training'
 
   get 'spacex' => 'commands#spacex'
+  post 'spacex' => 'commands#spacex'
+  
   get 'google' => 'payments#new', id: 'google'
   post 'google' => 'payments#create', id: 'google'
 
