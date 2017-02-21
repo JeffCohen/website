@@ -9,7 +9,7 @@ class CommandsController < ApplicationController
       message = "I don't know the time of the next launch."
     else
       eta = distance_of_time_in_words(t - Time.now)
-      scheduled = t.in_time_zone('America/Chicago').strftime("%A, %B %e, %Y at %l:%M %P")
+      scheduled = t.in_time_zone('America/Chicago').strftime("%A, %B %e, %Y at %l:%M %P %Z")
       message = "The next launch is in #{eta}!\n#{scheduled}".sub(/  /,' ')
     end
 
