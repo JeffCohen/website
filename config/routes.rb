@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get 'consulting' => 'pages#consulting'
   get 'tutoring' => 'pages#tutoring'
   get 'training' => 'pages#training'
-  get 'resume' to: redirect('/resume.pdf')
+  get 'resume', to: redirect('/resume.pdf')
 
   get 'spacex' => 'commands#spacex'
   post 'spacex' => 'commands#spacex'
