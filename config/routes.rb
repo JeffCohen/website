@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   # Teaching
 
-  get '/prereq' => 'teaching#hackthis'
+  #get '/prereq' => 'teaching#hackthis'
 
   # ECommerce
   resources :payments do
