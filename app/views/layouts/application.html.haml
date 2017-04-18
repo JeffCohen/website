@@ -25,8 +25,14 @@
           %p= link_to "Bio", bio_path
           %p= link_to "Resume", resume_path
           -# %p= link_to "For Students", essays_path
-
         .col-sm-8
           = yield
+
+      .row.footer
+        %hr
+        .col-sm-3
+          = link_to image_tag('shopify.jpg', class: 'img-responsive shopify'),  'https://www.shopify.com/?ref=purple-workshops'
+        .col-sm-offset-1.col-sm-8
+          = render 'layouts/client_logos'
 
     = render 'layouts/ga' if Rails.env.production?
