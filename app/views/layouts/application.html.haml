@@ -29,10 +29,7 @@
           = yield
 
       .row.footer
-        %hr
-        .col-sm-3
-          = link_to image_tag('shopify.jpg', class: 'img-responsive shopify'),  'https://www.shopify.com/?ref=purple-workshops'
-        .col-sm-offset-1.col-sm-8
+        .col-sm-offset-1.col-sm-10
           = render 'layouts/client_logos'
 
     = render 'layouts/ga' if Rails.env.production?

@@ -17,6 +17,9 @@
  *= require_self
  */
 
+.top-margin {
+  margin-top: 24px;
+}
 img.logo {
   width: 300px;
   margin-bottom: 30px;
@@ -28,9 +31,12 @@ img.logo {
   color: yellow;
 }
 
-.footer {
-  margin-top: 12px;
+.logo {
+  padding: 12px;
 }
-.footer hr {
-  border-top: 8px solid #ddd;
+.footer {
+  margin-top: 36px;
+  padding-top: 36px;
+  /*border-top: 4px solid #ddd;*/
+  /*background-color: #f4f4f4;*/
 }
