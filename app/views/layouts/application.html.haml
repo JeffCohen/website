@@ -1,9 +1,12 @@
 !!!
 %html
   %head
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     %title Jeffrey Cohen
-    = stylesheet_link_tag    'application', media: 'all'
     = stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'
+    = stylesheet_link_tag    'application', media: 'all'
 
     = javascript_include_tag 'application'
     = javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
@@ -15,21 +18,16 @@
     .container-fluid
 
       .row
-        .col-xs-3.navigation.hidden-xs
+        .col-sm-3.navigation.hidden-xs
           %p= link_to "Home", root_path
-          -# %p= link_to "Essays", essays_path
           %p= link_to "Consulting", consulting_path
           %p= link_to "Corp Training", training_path
           %p= link_to "Speaking", speaking_path
           %p= link_to "Tutoring", tutoring_path
           %p= link_to "Bio", bio_path
           %p= link_to "Resume", resume_path
-          -# %p= link_to "For Students", essays_path
-        .col-xs-8
+        .col-sm-8
           = yield
 
-      .row.footer
-        .col-xs-offset-1.col-xs-10
-          = render 'layouts/client_logos'
 
     = render 'layouts/ga' if Rails.env.production?

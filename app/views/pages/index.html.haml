@@ -1,5 +1,5 @@
 .row
-  .col-md-12
+  .col-sm-12
     .pull-right.img-responsive= image_tag 'me.jpg', width: '150px', class: 'img-circle'
     %h1 I teach, build, and write.
 
@@ -12,18 +12,28 @@
       I build software as a freelance engineer, and I teach
       graduate-level
       courses in computer science, web development,
-      software project management, and web services.
+      project management, and software engineering.
 
 
     -# .row.top-margin
-    -#   .col-sm-5
+    -#   .col-xs-5
     -#     %p.logos= image_tag 'nu.png', class: 'img-responsive'
-    -#   .col-sm-6
+    -#   .col-xs-6
     -#     %p.logos= image_tag 'uchicago.gif', class: 'img-responsive'
 
+    .visible-xs
+      = render 'layouts/client_logos'
 
+    %hr.visible-xs
 
+    %p.visible-xs= link_to "Consulting", consulting_path
+    %p.visible-xs= link_to "Corporate Training", training_path
+    %p.visible-xs= link_to "Speaking", speaking_path
+    %p.visible-xs= link_to "Tutoring", tutoring_path
+    %p.visible-xs= link_to "Bio", bio_path
+    %p.visible-xs= link_to "Resume", resume_path
 
+    %hr
 
     %p
       %small

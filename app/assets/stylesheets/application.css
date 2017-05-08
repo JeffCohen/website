@@ -49,8 +49,14 @@ p.logos img.img-responsive {
   padding: 12px;
 }
 .footer {
-  margin-top: 72px;
+  /*margin-top: 72px;*/
   padding-top: 36px;
-  /*border-top: 4px solid #ddd;*/
-  /*background-color: #f4f4f4;*/
+}
+hr {
+  border-top: 4px solid #ddd;
+  background-color: #f4f4f4;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  color: white;
 }
