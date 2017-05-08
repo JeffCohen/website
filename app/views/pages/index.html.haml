@@ -21,22 +21,33 @@
     -#   .col-xs-6
     -#     %p.logos= image_tag 'uchicago.gif', class: 'img-responsive'
 
-    .visible-xs
+.visible-xs
+  .row
+    .col-xs-12
       = render 'layouts/client_logos'
 
-    %hr.visible-xs
+  %hr
 
-    %p.visible-xs= link_to "Consulting", consulting_path
-    %p.visible-xs= link_to "Corporate Training", training_path
-    %p.visible-xs= link_to "Speaking", speaking_path
-    %p.visible-xs= link_to "Tutoring", tutoring_path
-    %p.visible-xs= link_to "Bio", bio_path
-    %p.visible-xs= link_to "Resume", resume_path
+  %ul.list-unstyled
+    %li= link_to "Consulting", consulting_path
+    %li= link_to "Corporate Training", training_path
+    %li= link_to "Speaking", speaking_path
+    %li= link_to "Tutoring", tutoring_path
+    %li= link_to "Bio", bio_path
+    %li= link_to "Resume", resume_path
 
+  %hr
+.row.hidden-xs
+  .col-sm-12
     %hr
 
+.row
+  .col-xs-12
     %p
       %small
         %em
           I would like everyone to study the movie Apollo 13 as a classic case study in human-computer interdependency.
           I am also fascinated by the process of improvisation in music, the way language shapes the way that we think, and the awesomeness of the Oxford comma.
+
+.row.hidden-xs
+  = render 'layouts/client_logos'
