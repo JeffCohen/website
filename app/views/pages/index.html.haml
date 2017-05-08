@@ -1,26 +1,29 @@
-.pull-right.img-responsive= image_tag 'me.jpg', width: '200px', class: 'img-circle'
 .row
-  .col-md-8
+  .col-md-12
+    .pull-right.img-responsive= image_tag 'me.jpg', width: '150px', class: 'img-circle'
     %h1 I teach, build, and write.
 
 
     %p.tag
       %strong 20+ years of building and managing software projects.
 
+
     %p
-      I teach graduate-level courses at the
-      = link_to 'University of Chicago', 'http://csmasters.uchicago.edu/'
-      and
-      = link_to 'Northwestern University', 'http://kellogg.northwestern.edu/'
-
-      covering computer science, web development,
-      relational databases, software project management, and web services.
+      I build software as a freelance engineer, and I teach
+      graduate-level
+      courses in computer science, web development,
+      software project management, and web services.
 
 
+    -# .row.top-margin
+    -#   .col-sm-5
+    -#     %p.logos= image_tag 'nu.png', class: 'img-responsive'
+    -#   .col-sm-6
+    -#     %p.logos= image_tag 'uchicago.gif', class: 'img-responsive'
 
-    %p I build software as a freelance engineer.  Every year, I choose to work on a variety of different projects and industries, so that my teaching is always current and well-informed.
 
-    %hr
+
+
 
     %p
       %small
