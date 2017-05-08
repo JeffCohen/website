@@ -17,6 +17,16 @@
  *= require_self
  */
 
+.block {
+  background-color: #165199;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+}
+.block h3 {
+  color: yellow;
+  font-weight: bold;
+}
 .top-margin {
   margin-top: 24px;
 }
