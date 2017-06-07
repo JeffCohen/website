@@ -61,3 +61,14 @@ hr {
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
 }
+
+.titles {
+  border-top: 4px solid #ddd;
+  padding-top: 24px;
+}
+.titles p {
+  font-size: 16px;
+  /*color: #165199;*/
+  /*font-variant: small-caps;*/
+  /*font-weight: bold;*/
+}
