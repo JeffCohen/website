@@ -2,7 +2,8 @@ require 'open-uri'
 class Spacex
 
   def self.next_launch
-    note = self.refresh
+    # note = self.refresh
+    note = Note.find_by(name: 'spacex.next')
     Time.parse(note.value) rescue nil
   end
 
