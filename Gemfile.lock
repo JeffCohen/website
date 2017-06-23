@@ -50,7 +50,7 @@ GEM
     concurrent-ruby (1.0.5)
     erubis (2.7.0)
     execjs (2.7.0)
-    ez (1.5.0.4)
+    ez (1.3.0)
       hirb (~> 0.7)
     faraday (0.12.1)
       multipart-post (>= 1.2, < 3)
@@ -180,7 +180,7 @@ DEPENDENCIES
   bootstrap_form
   byebug
   coffee-rails (~> 4.1.0)
-  ez
+  ez (= 1.3.0)
   haml
   haml-rails
   jbuilder (~> 2.0)

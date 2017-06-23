@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'haml'
-gem 'ez'
+gem 'ez', '= 1.3.0'
 gem 'stripe'
 gem 'kaminari'
 gem 'bootstrap_form'
