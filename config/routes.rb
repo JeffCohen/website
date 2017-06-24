@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get 'resume', to: redirect('/resume.pdf')
 
   get 'spacex' => 'commands#spacex'
-  post 'spacex' => 'commands#spacex'
+  get 'blackhawks' => 'commands#blackhawks'
 
   get 'google' => 'payments#new', id: 'google'
   post 'google' => 'payments#create', id: 'google'
