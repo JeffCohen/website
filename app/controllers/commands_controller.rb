@@ -14,7 +14,7 @@ class CommandsController < ApplicationController
       opponent = opponent.sub('@','').strip
 
       eta = distance_of_time_in_words(t - Time.now)
-      scheduled = t.strftime("%A, %B %e, %Y at %l:%M %P %Z")
+      scheduled = t.strftime("%A, %B %e, %Y at %l:%M %P CT")
       scheduled.sub!(/  /,' ')
       message = "[#{location.upcase}] #{opponent} in #{eta}!\n#{scheduled}".sub(/  /,' ')
     end
