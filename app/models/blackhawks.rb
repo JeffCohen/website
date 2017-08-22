@@ -7,7 +7,7 @@ class Blackhawks
       games = JSON.parse(note.value)['DataBag']
       game = games.detect do |game|
         start_date = Time.parse(game['StartDateTime']).to_date
-        start_date >= Date.today
+        (start_date >= '2017-10-01'.to_date) && (start_date >= Date.today)
       end
     else
       nil
