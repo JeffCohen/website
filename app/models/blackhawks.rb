@@ -23,8 +23,8 @@ class Blackhawks
     begin
       Rails.logger.info "Refresing Blackhawks data..."
       json = open('http://nhl.calreply.net/blackhawks/EventsList').read
-      json = json.sub('🏒','')
-      json = json.sub("\u{1F3D2}",'')
+      json = json.gsub('🏒','')
+      json = json.gsub("\u{1F3D2}",'')
       if json
         note.value = json
         note.save
