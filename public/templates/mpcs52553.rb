@@ -26,6 +26,8 @@ end
 
 gem_group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 gem_group :production do
@@ -42,19 +44,24 @@ timestamps: true
 EOF
 end
 
-run 'bundle install --without production'
+run 'bundle install --without production --quiet'
 
 comment_lines 'app/controllers/application_controller.rb', /protect_from_forgery/
 
-download_file 'https://www.jeffcohenonline.com/templates/bootstrap-template.txt', 'app/views/layouts', 'application.html.erb'
-download_file 'https://www.jeffcohenonline.com/templates/backtace-silencer.txt', 'config/initializers', 'backtrace_silencer.rb'
-download_file 'https://www.jeffcohenonline.com/templates/development.rb', 'config/environments', 'development.rb'
-
+remove_file 'README.md'
 remove_dir 'app/assets'
 remove_dir 'app/jobs'
+remove_dir 'lib'
+remove_dir 'vendor'
+
+download_file 'https://www.jeffcohenonline.com/templates/bootstrap-layout.txt', 'app/views/layouts', 'application.html.erb'
+download_file 'https://www.jeffcohenonline.com/templates/backtrace-silencers.rb', 'config/initializers', 'backtrace_silencers.rb'
+download_file 'https://www.jeffcohenonline.com/templates/development.rb', 'config/environments', 'development.rb'
+create_file "public/stylesheets/styles.css", "/* Put your style rules below. */"
+
 
 run 'rails ez:generate_yml'
 
 git :init
-git add: "-A"
-git commit: "-m 'Project started.'"
+git add: "-A ."
+git commit: "-qm 'Project started.'"
