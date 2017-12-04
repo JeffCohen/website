@@ -62,6 +62,5 @@ create_file "public/stylesheets/styles.css", "/* Put your style rules below. */"
 
 run 'rails ez:generate_yml'
 
-git :init
 git add: "-A ."
 git commit: "-qm 'Project started.'"
