@@ -1,0 +1,6 @@
+# --skip-bundle
+# --skip-turbolinks
+# --skip-action-mailer
+# --skip-action-cable
+# --skip-test
+# --skip-yarn
