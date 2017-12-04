@@ -54,6 +54,8 @@ remove_dir 'app/jobs'
 remove_dir 'lib'
 remove_dir 'vendor'
 
+application 'config.time_zone = 'Central Time (US & Canada)'
+
 download_file 'https://www.jeffcohenonline.com/templates/bootstrap-layout.txt', 'app/views/layouts', 'application.html.erb'
 download_file 'https://www.jeffcohenonline.com/templates/backtrace-silencers.rb', 'config/initializers', 'backtrace_silencers.rb'
 download_file 'https://www.jeffcohenonline.com/templates/development.rb', 'config/environments', 'development.rb'
@@ -64,3 +66,12 @@ run 'rails ez:generate_yml'
 
 git add: "-A ."
 git commit: "-qm 'Project started.'"
+
+puts
+puts "Your new application is ready!"
+puts
+puts "Next steps:"
+puts
+puts "  cd #{File.basename(Rails.root)}"
+puts "  rails server"
+puts
