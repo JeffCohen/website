@@ -1,6 +1,6 @@
-# --skip-bundle
-# --skip-turbolinks
-# --skip-action-mailer
-# --skip-action-cable
-# --skip-test
-# --skip-yarn
+--skip-bundle
+--skip-turbolinks
+--skip-action-mailer
+--skip-action-cable
+--skip-test
+--skip-yarn

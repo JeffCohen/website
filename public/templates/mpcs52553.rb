@@ -10,8 +10,6 @@ remove_file "Gemfile"
 run         "touch Gemfile"
 add_source  'https://rubygems.org'
 
-gem 'rails', '5.1.4'
-
 gem 'ez', path: '/Users/jcohen/projects/classroom/ez'
 
 gem 'rails', '~> 5.1.4'
