@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
+  get 'bikes' => 'bikes#index'
+  get 'bikes/nearest/' => 'bikes#index'
+
   # For Students
   get '/amazon.json' => 'amazon#index'
   get '/creditcard.json' => 'credit_card_validator#new'
