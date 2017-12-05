@@ -1,4 +1,4 @@
-# Application template for LAWSTUDY 713
+# Application template for MPCS 52553
 
 def download_file(url, directory = ".", new_filename)
   inside(directory) do
@@ -9,8 +9,6 @@ end
 remove_file "Gemfile"
 run         "touch Gemfile"
 add_source  'https://rubygems.org'
-
-gem 'rails', '5.1.4'
 
 gem 'ez', path: '/Users/jcohen/projects/classroom/ez'
 
@@ -28,6 +26,8 @@ end
 
 gem_group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 gem_group :production do
@@ -44,19 +44,32 @@ timestamps: true
 EOF
 end
 
-run 'bundle install --without production'
+run 'bundle install --without production --quiet'
 
 comment_lines 'app/controllers/application_controller.rb', /protect_from_forgery/
 
-download_file 'https://www.jeffcohenonline.com/templates/bootstrap-template.txt', 'app/views/layouts', 'application.html.erb'
-download_file 'https://www.jeffcohenonline.com/templates/backtace-silencer.txt', 'config/initializers', 'backtrace_silencer.rb'
-download_file 'https://www.jeffcohenonline.com/templates/development.rb', 'config/environments', 'development.rb'
-
+remove_file 'README.md'
 remove_dir 'app/assets'
 remove_dir 'app/jobs'
+remove_dir 'app/controllers/concerns'
+remove_dir 'app/models/concerns'
+remove_dir 'lib'
+remove_dir 'vendor'
+
+gsub_file 'config/routes.rb', /^\s*# For details on the DSL.+$/, ''
+
+application "config.time_zone = 'Central Time (US & Canada)'"
+
+download_file 'https://www.jeffcohenonline.com/templates/bootstrap-layout.txt', 'app/views/layouts', 'application.html.erb'
+download_file 'https://www.jeffcohenonline.com/templates/backtrace-silencers.rb', 'config/initializers', 'backtrace_silencers.rb'
+download_file 'https://www.jeffcohenonline.com/templates/development.rb', 'config/environments', 'development.rb'
+create_file "public/stylesheets/styles.css", "/* Put your style rules below. */"
+
 
 run 'rails ez:generate_yml'
 
-git :init
-git add: "-A"
-git commit: "-m 'Project started.'"
+git add: "-A ."
+git commit: "-qm 'Project started.'"
+
+puts
+puts "Your new application is ready!"

@@ -51,6 +51,8 @@ comment_lines 'app/controllers/application_controller.rb', /protect_from_forgery
 remove_file 'README.md'
 remove_dir 'app/assets'
 remove_dir 'app/jobs'
+remove_dir 'app/controllers/concerns'
+remove_dir 'app/models/concerns'
 remove_dir 'lib'
 remove_dir 'vendor'
 

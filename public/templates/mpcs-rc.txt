@@ -4,3 +4,4 @@
 --skip-action-cable
 --skip-test
 --skip-yarn
+--quiet
