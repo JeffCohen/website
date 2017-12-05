@@ -10,7 +10,8 @@ remove_file "Gemfile"
 run         "touch Gemfile"
 add_source  'https://rubygems.org'
 
-gem 'ez', path: '/Users/jcohen/projects/classroom/ez'
+gem 'ez'
+gem 'bootsnap', require: false
 
 gem 'rails', '~> 5.1.4'
 gem 'puma', '~> 3.7'
@@ -34,6 +35,7 @@ gem_group :production do
   gem 'pg'
 end
 
+append_to_file "config/boot.rb", "require 'bootsnap/setup'"
 
 create_file '.ez' do <<-EOF
 models: true
