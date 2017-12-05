@@ -54,7 +54,7 @@ remove_dir 'app/jobs'
 remove_dir 'lib'
 remove_dir 'vendor'
 
-gsub_file 'config/routes.rb', /For details on the DSL/, ''
+gsub_file 'config/routes.rb', /^# For details on the DSL.+$/, ''
 
 application "config.time_zone = 'Central Time (US & Canada)'"
 
