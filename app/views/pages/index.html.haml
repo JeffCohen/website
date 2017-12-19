@@ -39,7 +39,17 @@
     -#   .col-xs-6
     -#     %p.logos= image_tag 'uchicago.gif', class: 'img-responsive'
 
+.row
+  .col-xs-12
+    %p
+      %small
+        %em
+          I would like everyone to study the movie Apollo 13 as a classic case study in human-computer interdependency.
+          I am also fascinated by the process of improvisation in music, the way language shapes the way that we think, and the awesomeness of the Oxford comma.
+
+
 .visible-xs
+  %hr
   .row
     .col-xs-12
       = render 'layouts/client_logos'
@@ -54,17 +64,5 @@
     %li= link_to "Bio", bio_path
     %li= link_to "Resume", resume_path
 
-  %hr
 .row.hidden-xs
-  .col-sm-12
-    %hr
-
-.row
-  .col-xs-12
-    %p
-      %small
-        %em
-          I would like everyone to study the movie Apollo 13 as a classic case study in human-computer interdependency.
-          I am also fascinated by the process of improvisation in music, the way language shapes the way that we think, and the awesomeness of the Oxford comma.
-
-= render 'layouts/client_logos'
+  = render 'layouts/client_logos'

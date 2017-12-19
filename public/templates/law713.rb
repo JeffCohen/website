@@ -72,6 +72,3 @@ run 'rails ez:generate_yml'
 
 git add: "-A ."
 git commit: "-qm 'Project started.'"
-
-puts
-puts "Your new application is ready!"
