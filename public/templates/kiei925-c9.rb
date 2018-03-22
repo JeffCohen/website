@@ -59,7 +59,7 @@ gsub_file 'config/routes.rb', /^\s*# For details on the DSL.+$/, ''
 
 application "config.time_zone = 'Central Time (US & Canada)'"
 
-download_file 'https://www.jeffcohenonline.com/templates/bootstrap-layout.txt', 'app/views/layouts', 'application.html.erb'
+download_file 'https://www.jeffcohenonline.com/templates/kiei925-layout.txt', 'app/views/layouts', 'application.html.erb'
 download_file 'https://www.jeffcohenonline.com/templates/backtrace-silencers.rb', 'config/initializers', 'backtrace_silencers.rb'
 download_file 'https://www.jeffcohenonline.com/templates/development.rb', 'config/environments', 'development.rb'
 create_file "public/stylesheets/styles.css", "/* Put your style rules below. */"
