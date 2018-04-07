@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  get '/workshops/:id' => 'workshops#show'
-  
+  get '/workshops/:id' => 'workshops#show', as: :workshop
+
   get 'bikes' => 'bikes#index'
   get 'bikes/nearest/' => 'bikes#index'
 
