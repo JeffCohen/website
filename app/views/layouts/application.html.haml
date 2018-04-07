@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     %title Jeffrey Cohen
-    = stylesheet_link_tag    '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'
+    = stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'
     = stylesheet_link_tag    'application', media: 'all'
 
     = javascript_include_tag 'application'
@@ -16,6 +16,11 @@
     = render 'layouts/navbar'
 
     .container-fluid
+
+      -# .alert.alert-success
+        -# = link_to "/workshops/front-end" do
+        -#   %p.text-center
+        -#     %strong(style="color: white;") NEW WORKSHOP! Introduction to Front-End Development.  June 2018 in Chicago.
 
       .row
         .col-sm-3.navigation.hidden-xs

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'payments/new'
-
   root 'pages#index'
 
+  get '/workshops/:id' => 'workshops#show'
+  
   get 'bikes' => 'bikes#index'
   get 'bikes/nearest/' => 'bikes#index'
 
@@ -25,20 +25,9 @@ Rails.application.routes.draw do
   get 'spacex' => 'commands#spacex'
   get 'blackhawks' => 'commands#blackhawks'
 
-  get 'google' => 'payments#new', id: 'google'
-  post 'google' => 'payments#create', id: 'google'
 
   # Teaching
 
   #get '/prereq' => 'teaching#hackthis'
 
-  # ECommerce
-  resources :payments do
-    collection do
-      post 'precheck'
-      post 'paypal'
-    end
-  end
-
-  resources :attendees
 end
