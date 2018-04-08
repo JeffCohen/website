@@ -1,30 +1,23 @@
 .row
   .col-sm-12
-    .pull-right.img-responsive= image_tag 'me.jpg', width: '150', class: 'img-circle'
+    .float-right.img-fluid= image_tag 'me.jpg', width: '150', class: 'rounded-circle'
     %h1 I teach, build, and write.
 
 
     %p.tag
-      %strong 20+ years of building and managing software projects.
+      %strong 25+ years of building high-quality software and managing projects.
 
 
-    %p
-      I build software as a freelance engineer, and I teach
-      graduate-level
-      courses in computer science, web development,
-      project management, and software engineering.
-
-
-    .row.titles
+    .row
       .col-sm-7
-        %p.smallcaps
+        %p
           Adjunct Lecturer of Innovation and Entrepreneurship
           %br
           Kellogg School of Management
           %br
           Northwestern University
       .col-sm-5
-        %p.smallcaps
+        %p
           Adjunct Assistant Professor
           %br
           Masters Progam in Computer Science
@@ -33,13 +26,7 @@
 
 
 
-    -# .row.top-margin
-    -#   .col-xs-5
-    -#     %p.logos= image_tag 'nu.png', class: 'img-responsive'
-    -#   .col-xs-6
-    -#     %p.logos= image_tag 'uchicago.gif', class: 'img-responsive'
-
-.row
+.row.mb-5
   .col-xs-12
     %p
       %small
@@ -48,14 +35,12 @@
           I am also fascinated by the process of improvisation in music, the way language shapes the way that we think, and the awesomeness of the Oxford comma.
 
 
-.visible-xs
-  %hr
-  .row
-    .col-xs-12
-      = render 'layouts/client_logos'
+    %hr
 
-  %hr
+.row.d-none.d-sm-block
+  = render 'layouts/client_logos'
 
+.row.d-block.d-sm-none
   %ul.list-unstyled
     %li= link_to "Consulting", consulting_path
     %li= link_to "Corporate Training", training_path
@@ -63,6 +48,3 @@
     %li= link_to "Tutoring", tutoring_path
     %li= link_to "Bio", bio_path
     %li= link_to "Resume", resume_path
-
-.row.hidden-xs
-  = render 'layouts/client_logos'

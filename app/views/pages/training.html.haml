@@ -1,9 +1,3 @@
-%p.pull-right
-  Contact me
-  = link_to "on Twitter", 'https://twitter.com/jeffcohen'
-  or drop me
-  = mail_to "cohen.jeff@gmail.com", "an email."
-
 %h1
   Public Workshops
 
@@ -14,53 +8,17 @@
     %ul
       %li= link_to "Essentials of Front-End Development", workshop_path(id: 'front-end')
       %li= link_to "Essentials of React and React Native", workshop_path(id: 'react')
+%hr
+
 %h1
   Corporate Training
 
-.row
-  .col-md-12
 
 .row
   .col-md-12
     %p
       Employees are an investment.  Maximize your return on that investment
       with targeted, efficient training.
-
-    .row
-      .col-sm-4
-        .col-sm-12.block
-          %h3
-            Computer Science
-          %ul.list-unstyled
-            %li Computer Science essentials
-            %li Security and Cryptography
-            %li Object-Oriented Design
-            %li Functional Programming with Elixir
-
-      .col-sm-4
-        .col-sm-12.block
-          %h3
-            Web Development
-          %ul.list-unstyled.text-center
-            %li Intro to HTML5, CSS3, and jQuery
-            %li Conversion from .NET/Java
-            %li Advanced Rails / Best Practices
-            %li Test-Driven Development
-
-      .col-sm-4
-        .col-sm-12.block
-          %h3.text-center
-            Beginner-Focused
-          %ul.list-unstyled
-            %li Intro to Programming with Python
-            %li Intro to Programming with Ruby
-            %li Becoming an agile team
-            %li Tools (Git, CI, DevOps)
-
-    %h3 Cost
-    %p
       Your cost is based on course content, not the number of attendees - so squeeze as many people
       in the room as you'd like!  Your cost is also
       independent of your location, because all travel expenses are on me (USA and UK).
-
-= render 'layouts/client_logos'

@@ -1,38 +1,38 @@
-%nav.navbar.navbar-default
-  .container-fluid
-
-    .navbar-header
-      %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#navbar-collapse-button", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      = link_to "Jeffrey Cohen", root_path, class: 'navbar-brand'
-
-    #navbar-collapse-button.collapse.navbar-collapse
-      %ul.nav.navbar-nav
-        %li.hidden-sm.hidden-md.hidden-lg= link_to "Home", root_path
-        %li.hidden-sm.hidden-md.hidden-lg= link_to "Consulting", consulting_path
-        %li.hidden-sm.hidden-md.hidden-lg= link_to "Training", training_path
-        %li.hidden-sm.hidden-md.hidden-lg= link_to "Speaking", speaking_path
-        %li.hidden-sm.hidden-md.hidden-lg= link_to "Tutoring", tutoring_path
-        %li.hidden-sm.hidden-md.hidden-lg= link_to "Bio", bio_path
-        %li.hidden-sm.hidden-md.hidden-lg= link_to "Resume", resume_path
-
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          = mail_to "cohen.jeff@gmail.com" do
-            %i.fa.fa-envelope
-            Email Me
-        %li
-          = link_to "https://twitter.com/jeffcohen" do
-            %i.fa.fa-twitter
-            Twitter
-        %li
-          = link_to "https://github.com/jeffcohen" do
-            %i.fa.fa-github
-            GitHub
-        %li
-          = link_to "https://www.linkedin.com/in/codeteacher" do
-            %i.fa.fa-linkedin
-            LinkedIn
+%nav.navbar.navbar-dark.bg-dark.navbar-expand-md
+  %button.navbar-toggler.collapsed{"aria-expanded" => "false", "data-target" => "#navbar-collapse-button", "data-toggle" => "collapse", :type => "button"}
+    %span.sr-only Toggle navigation
+    ☰
+  %a.navbar-brand{:href => "/"} Jeffrey Cohen
+  #navbar-collapse-button.collapse.navbar-collapse
+    %ul.nav.navbar-nav
+      %li.d-sm-none.d-md-none.hidden-lg.nav-item
+        %a.nav-link{:href => "/"} Home
+      %li.d-sm-none.d-md-none.hidden-lg.nav-item
+        %a.nav-link{:href => "/consulting"} Consulting
+      %li.d-sm-none.d-md-none.hidden-lg.nav-item
+        %a.nav-link{:href => "/training"} Training
+      %li.d-sm-none.d-md-none.hidden-lg.nav-item
+        %a.nav-link{:href => "/speaking"} Speaking
+      %li.d-sm-none.d-md-none.hidden-lg.nav-item
+        %a.nav-link{:href => "/tutoring"} Tutoring
+      %li.d-sm-none.d-md-none.hidden-lg.nav-item
+        %a.nav-link{:href => "/bio"} Bio
+      %li.d-sm-none.d-md-none.hidden-lg.nav-item
+        %a.nav-link{:href => "/resume"} Resume
+    %ul.nav.navbar-nav.ml-auto
+      %li.nav-item
+        %a.nav-link{:href => "mailto:cohen.jeff@gmail.com"}
+          %i.fas.fa-envelope
+          Email Me
+      %li.nav-item
+        %a.nav-link{:href => "https://twitter.com/jeffcohen"}
+          %i.fab.fa-twitter
+          Twitter
+      %li.nav-item
+        %a.nav-link{:href => "https://github.com/jeffcohen"}
+          %i.fab.fa-github
+          GitHub
+      %li.nav-item
+        %a.nav-link{:href => "https://www.linkedin.com/in/codeteacher"}
+          %i.fab.fa-linkedin
+          LinkedIn

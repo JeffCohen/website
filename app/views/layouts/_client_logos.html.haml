@@ -1,11 +1,11 @@
 - client_logos.each_slice(4) do |logos|
-  .row.hidden-xs.top-margin
+  .row.d-sm-block.top-margin
     - logos.each do |logo|
-      .col-xs-3
-        = image_tag logo, class: 'img-responsive'
+      -# .col-xs-3
+      = image_tag logo, class: 'img-fluid logo'
 
 - client_logos.each_slice(2) do |logos|
-  .row.visible-xs
+  .row.d-block.d-sm-none
     - logos.each do |logo|
-      .col-xs-6
-        = image_tag logo, class: 'img-responsive'
+      -# .col-xs-3
+      = image_tag logo, class: 'img-fluid logo'

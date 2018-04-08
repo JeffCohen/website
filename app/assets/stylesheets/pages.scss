@@ -1,18 +1,13 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-nav.navbar-default {
-  background: #165199;
-  .navbar-brand {
-    color: white;
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  &:hover {
+    color: rgb(30, 238, 81)
   }
 }
-.navbar-default .navbar-nav > li > a {
-  // color: #187126;
-  color: white;
-  font-weight: bold;
-}
+
 h1 {
   font-weight: bold;
   font-size: 24px;
@@ -26,6 +21,7 @@ h3 {
   font-size: 18px;
   text-transform: uppercase;
   color: #222;
+  font-family: 'Lato'
 }
 p {
   font-family: 'Lato', sans-serif;
@@ -42,18 +38,22 @@ p {
     }
   }
 }
+img.logo {
+  width: 200px;
+  padding: 10px;
+}
+
 .navigation {
 
   a {
     margin-left: 36px;
     font-weight: normal;
-    text-transform: uppercase;
     color: #222;
     font-family: 'Roboto', sans-serif;
     border-bottom: none;
     &:hover {
       text-decoration: none;
-      color: green;
+      color: rgb(21, 189, 62)
     }
   }
 }
