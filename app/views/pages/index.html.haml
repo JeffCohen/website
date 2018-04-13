@@ -27,7 +27,7 @@
 
 
 .row.mb-5
-  .col-xs-12
+  .col-sm-12
     %p
       %small
         %em
@@ -41,10 +41,11 @@
   = render 'layouts/client_logos'
 
 .row.d-block.d-sm-none
-  %ul.list-unstyled
-    %li= link_to "Consulting", consulting_path
-    %li= link_to "Corporate Training", training_path
-    %li= link_to "Speaking", speaking_path
-    %li= link_to "Tutoring", tutoring_path
-    %li= link_to "Bio", bio_path
-    %li= link_to "Resume", resume_path
+  .col-sm-12
+    %ul.list-unstyled
+      %li= link_to "Consulting", consulting_path
+      %li= link_to "Corporate Training", training_path
+      %li= link_to "Speaking", speaking_path
+      %li= link_to "Tutoring", tutoring_path
+      %li= link_to "Bio", bio_path
+      %li= link_to "Resume", resume_path
