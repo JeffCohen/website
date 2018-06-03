@@ -46,7 +46,8 @@ end
 run 'bundle install --without production --quiet'
 
 comment_lines 'app/controllers/application_controller.rb', /protect_from_forgery/
-comment_lines 'config/boot.rb', /bootsnap/
+gsub_file 'config/routes.rb', /^require \'bootsnap\/setup\' # Speed up boot time by caching expensive operations\.$/, ''
+
 
 remove_file 'README.md'
 remove_dir 'app/jobs'
