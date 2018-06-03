@@ -46,6 +46,7 @@ end
 run 'bundle install --without production --quiet'
 
 comment_lines 'app/controllers/application_controller.rb', /protect_from_forgery/
+comment_lines 'config/boot.rb', /bootsnap/
 
 remove_file 'README.md'
 remove_dir 'app/jobs'
