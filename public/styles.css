@@ -1,0 +1,38 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+p { font-size: 18px; color: #666; }
+li { color: #666; }
+
+img.bio { width: 200px; box-shadow: 4px 4px 4px #CCC;}
+nav {
+  margin-bottom: 3em;
+}
+
+img.logo {
+  width: 200px;
+  padding: 10px;
+}
+
+.sidebar {
+  font-size: 24px;
+}
+.navbar-dark .navbar-brand {
+  border-bottom: none;
+  color: white;
+}
+a {
+  color: #666;
+  text-decoration: none;
+  border-bottom: dotted 1px;
+}
+a:hover {
+  text-decoration: none;
+  color: #187126;
+  border-bottom: dotted 1px;
+}
+.navbar-dark .navbar-nav .nav-link {
+  border-bottom: none;
+  color: yellow;
+}
