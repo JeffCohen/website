@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.5.1"
 
 gem 'haml'
 gem 'ez', '= 1.3.0'
