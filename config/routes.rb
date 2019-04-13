@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   get 'essays' => 'essays#index'
   get 'speaking' => 'pages#speaking'
+  get 'team' => 'pages#team'
   get 'bio' => 'pages#about'
   get 'about' => 'pages#about'
   get 'consulting' => 'pages#consulting'
