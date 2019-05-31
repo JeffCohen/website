@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
+  get '/blog/:title' => 'pages#show'
+
   get '/workshops/:id' => 'workshops#show', as: :workshop
 
   get 'ping' => 'pages#ping'

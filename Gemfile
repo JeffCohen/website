@@ -10,6 +10,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'haml'
 gem 'ez', '= 1.3.0'
 gem 'kaminari'
+gem 'commonmarker'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
