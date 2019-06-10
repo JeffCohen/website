@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  layout 'blog', only: :show
+
   def ping
     render plain: "pong #{request.remote_ip}"
   end
