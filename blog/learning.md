@@ -35,15 +35,15 @@ So what does last? If transferring facts from my brain to theirs is only a short
 
 ---
 
-Here's what education should really be about: 
+This is what's better: equipping students so they know
 
 * how to solve problems
 * how to troubleshoot 
 * how to read technical specifications
 * how to use both inductive and deductive reasoning
-* how to gainfully read online articles and tutorials 
+* how to interpret online articles and tutorials 
 
-These are the skills that never get old. These are the only skills that actually enable students to adapt, to learn new things, and to succeed in their work.  And that's the real reason why they came into my classroom in the first place.
+These are the skills that never get old because they enable people to adapt to new situations, learn new things whenever they need, and to succeed in their work.  And that's the real reason why they came into my classroom in the first place.
 
 
 
