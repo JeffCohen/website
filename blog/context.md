@@ -28,11 +28,12 @@ then can I make a plan a route for getting them to where they want to be.
 ---
 
 
-<p class="text-center"><img src="https://www.simplypsychology.org/ZPD.gif?escpb=184-21&ezimgfmt=rs:555x416/rscb21/ng:webp/ngcb21" style="width: 400px"></p>
-
 In 1978, psychologist Lev Vygotsky introduced the notion of the _Zone of Proximal Development_, sometimes referred to as learning adjacency.  It's a key idea that's especially apparent when working with junior and senior developers alike: our brain can't learn anything without making connections to what we already know.  Learning something new always happens in the context of what we know so far. 
 
 This means that in order to learn a new concept, technique, or skill, it must be reachable from the knowledge we already have.  And this gap must be very small.  
+
+<p class="text-center"><img class="img-fluid m-3" src="https://www.simplypsychology.org/ZPD.gif?escpb=184-21&ezimgfmt=rs:555x416/rscb21/ng:webp/ngcb21" style="width: 400px"></p>
+
 
 We know this intuitively: once we have learned 4th grade algebra, jumping to differential calculus is not going to be possible.  Instead, we learn 5th grade algebra, which is a smaller step and more likely to be integrated into our current knowledge.  
 

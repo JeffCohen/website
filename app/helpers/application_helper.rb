@@ -2,7 +2,7 @@ module ApplicationHelper
 
   def markdown(text)
     md = ERB.new(text).result(binding)
-    html = CommonMarker.render_html(md, :GITHUB_PRE_LANG, [:table, :autolink])
+    html = CommonMarker.render_html(md, [:UNSAFE, :GITHUB_PRE_LANG], [:table, :autolink])
     html.html_safe
   end
 
