@@ -17,8 +17,7 @@ that instead of starting from your current position, it gave directions from
 a random location instead.
 
 That wouldn't be very helpful, right?  To get somewhere, you need guidance
-starting from the place where you are right now.  
-Turn-by-turn directions are useless if they start from the wrong place.
+starting from the place where you are right now.   Turn-by-turn directions are useless if they start from the wrong place.
 
 As a teacher, we have to know where our students are starting from.
 I have to really empathize with the mind of the student, and 
@@ -28,9 +27,9 @@ then can I make a plan a route for getting them to where they want to be.
 ---
 
 
-In 1978, psychologist Lev Vygotsky introduced the notion of the _Zone of Proximal Development_, sometimes referred to as learning adjacency.  It's a key idea that's especially apparent when working with junior and senior developers alike: our brain can't learn anything without making connections to what we already know.  Learning something new always happens in the context of what we know so far. 
+In 1978, psychologist Lev Vygotsky introduced the notion of the _Zone of Proximal Development_, sometimes referred to as learning adjacency.  It's a key idea that's especially apparent when working with junior: the brain can only learn by making connections to what it already knows.  Learning something always happens in the context of what is known so far. 
 
-This means that in order to learn a new concept, technique, or skill, it must be reachable from the knowledge we already have.  And this gap must be very small.  
+In order for someone to learn a new concept, technique, or skill, it must be reachable from the knowledge they already have.  And the gap between the tip of their current knowledge and the new knowledge they wish to attain must be very small.
 
 <p class="text-center"><img class="img-fluid m-3" src="https://www.simplypsychology.org/ZPD.gif?escpb=184-21&ezimgfmt=rs:555x416/rscb21/ng:webp/ngcb21" style="width: 400px"></p>
 
